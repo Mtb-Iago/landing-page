@@ -1,5 +1,5 @@
-*{
-    
+body,html{
+    font-family: sans-serif;
 }
 
 /*CABEÇALHO E HEADER*/
@@ -9,17 +9,27 @@
     background-repeat: round;
     
 }
-#banner header {
+
+#banner header .menu {
     display: flex;
     list-style: none;
     justify-content: flex-end;
+
+    margin-top: -75px;
+    width: 200px;
+    float: right;
+    margin-right: 57px;
 }
-#banner header #ImgLogo {
-    
+#banner header menu #ImgLogo {
+    width: 90px;
     margin: auto auto auto 53px;
     display: flex;
 }
-#banner header a {
+#banner #ImgLogo img {
+    margin-top: 20px;
+    margin-left: 45px;
+}
+#banner header menu a {
     color: black;
     text-decoration: none;
     font-weight: bolder;
@@ -28,6 +38,17 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    width: 40px;
+    float: right;
+    margin-right: -298px;
+    margin-top: -39px;
+}
+#banner header ul .menu-anchor {
+    display: none;
+}
+#banner header li {
+    list-style: none;
 }
 #banner #titleBannerButton {
     
@@ -39,6 +60,7 @@
     font-weight: 500;
     font-size: 33pt;
     margin-bottom: -10px;
+    margin-top: 123px;
 }
 #banner #titleBannerButton h4 {
     font-family: sans-serif;
@@ -91,6 +113,10 @@
     font-size: 15pt;
     margin-right: 5px;
     text-align: inherit;
+}
+#sobre #content #text1 a,
+.fa .fas{
+    display: none;
 }
 #sobre #content #buttonBlue {
     margin-top: 15px;
@@ -253,6 +279,9 @@
 #contatos #formulario #form2 input {
     margin: 0;
 }
+#contatos #formulario #form2 #buttonDiv{
+    display: flex;
+}
 #contatos #formulario #form2 button {
     width: 135px;
     margin: auto;
@@ -352,6 +381,15 @@
     margin: 60px;
     margin-top: 10px;
 }
+#footer #left #menu #hideMenuFooter,
+#footer #left #sobreFooter #hideSobreFooter
+ {
+    display: contents;
+}
+#footer #left #menu #neweMenuFooter h3 #angleDownHide {
+    display:none;
+}
+
 #footer #left #menu h3{
     color: #fff;
 }
@@ -394,3 +432,420 @@
     margin-left: -360px;
     margin-top: 270px;
 }
+#footer #footerResponsive {
+    display:flex;
+    height: 100%;
+    width: 100%;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 780px) 
+{
+    
+    body, html{
+        width: auto;
+        display: contents;
+        margin: 0;
+       
+        
+    }
+    main {
+       
+        width: 400px;
+        overflow: hidden;
+    }
+    #banner {
+        width: auto;
+        height: 367px;
+        background-image: url(./img/bannerResponsive.png);
+        background-repeat: round;
+        
+    }
+    #banner header .menu {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            
+            margin-top: 0;
+           
+            width: auto;
+            float:none;
+            margin-right: 0;
+    }
+    #banner #ImgLogo {
+        width: 100px;
+        margin-left: -15px;
+    }
+    #banner #menuButton {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 245px;
+    margin-top: -275px;
+    margin-left: 215px;
+    }
+    #banner header {
+        width: 300px;
+    }
+    #banner header ul {
+        margin-top: 20px;
+        display: inline-flex;
+    }
+    #banner header ul img {
+        margin-right: 5px;
+    }
+    #banner header li {
+        width: 40px;
+        float: right;
+    }
+    #banner header ul #searcher {
+        margin-top: 0;
+    }
+    #banner header ul .menu-anchor {
+      display: inline-flex;
+    }
+  /* posicionando pra fora do viewport */
+    #banner header .menu {
+        display: inline-grid;
+        left: -220px;
+        transition: left .25s linear;
+        
+    }
+ 
+ /* quando o script inserir a classe, nós retornamos o menu para a posição original */
+    .menu-active #banner header .menu {
+        left: 0;
+    }
+    #banner header, .menu {
+        -webkit-transform: translateX(0);
+}
+    #banner header .menu {
+        transform: translateX(-220px);
+        transition: all .15s linear;
+}
+    .menu-active #banner {
+    
+    background-repeat: round;
+}
+
+    .menu-active #banner header .menu {
+       
+    /*transform: translateX(65px);*/
+    transform: translate(45px, 23px);
+    transition: all .25s linear;
+}
+
+    .menu-active #titleBannerButton {
+        display: none;
+        
+    }
+#banner #titleBannerButton {
+    width: 300px;
+    margin-top: -141px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+#banner #titleBannerButton h1 {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 21pt;
+    margin-bottom: -10px;
+}
+#banner #titleBannerButton h4 {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: rgb(129, 129, 129);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#banner #titleBannerButton button {
+    color: #fff;
+    background-color: #525252f2;
+    width: 155px;
+    height: 45px;
+    border: none;
+    margin-left: 4px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+/*SOBRE*/
+#sobre {
+    width: auto;
+}
+#sobre #content {
+    display: contents;
+}
+#sobre #content #contentImg {
+    width: auto;
+}
+#sobre #content #contentImg1 img {
+    width: auto;
+}
+#sobre #content #text1 button{
+    display: none;
+}
+#sobre #content #text1 a{
+    display: inline-flex;
+    text-decoration: none;
+    color: black;
+    margin-left: 33%;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#sobre #content #text1 i {
+    margin-left: 9px;
+}
+#sobre #content2 {
+    display: none;
+}
+    .content2-active #sobre #content2 {
+        display: contents;
+}
+
+#sobre #content2 #contentImg2 {
+    width: auto;
+}
+#sobre #content2 #contentImg2 img {
+    width: auto;
+}
+/*PORTFOLIO*/
+#portfolio {
+    display: inline-grid;
+    margin: auto;
+    text-align: center;
+    width: auto;
+}
+#portfolio #imagesPort {
+    width: auto;
+    margin: auto;
+}
+#portfolio #imagesPort img {
+    width: 150px;
+    height: 175px;
+    margin: 15px;
+}
+#portfolio #imagesPort .newProjectsImg {
+    display: none;
+}
+    .newProjects-active #portfolio #imagesPort .newProjectsImg {
+        display: inline-grid;
+    }
+
+
+/*DEPOIMENTOS*/
+
+#depoimentos {
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#depoimentos #slider {
+    display: contents;
+}
+#depoimentos #slider #angle #coments .avatarHide {
+    display: none;
+}
+
+/*CONTATOS*/
+
+#contatos {
+    width: auto;
+}
+#contatos #form2 {
+    flex-direction: row-reverse;
+    width: 228px;
+    display: flex;
+    margin-left: 85px;
+}
+#contatos #form2 #textAreaDiv {
+   width: 100%;
+   margin-top: 55px;
+}
+#contatos #form2 #textAreaDiv textarea {
+    
+    margin-right: 137px;
+    margin-left: -75px;
+    width: 225px;
+ }
+#contatos #form2 #inputDiv {
+    margin-left: 39px;
+    margin-right: -152px;
+}
+
+#contatos #form2 #inputDiv input {
+
+}
+
+#contatos #form2 #buttonDiv {
+    margin-top: 260px;;
+    margin-right: -221px;
+}
+#contatos #formulario input {
+    border: solid 1px black;
+}
+
+/*FOOTER*/
+
+#footer {
+    display: inline-grid;
+    width: auto;
+    height: 1150px;
+    
+}
+#footer #footerResponsive {
+    margin: 20px;
+    border: solid 5px #fff;
+    width: 87%;
+    overflow: hidden;
+    height: auto;
+}
+#footer #left img {
+    margin-top: -830px;
+    margin-left: 70px;
+    height: 50px;
+    position: absolute;
+}
+#footer #rigth {
+   /* width: 259px; */
+    height: auto;
+    border: none;
+    margin: auto;
+    margin-right: 59px;
+    height: 960px;
+    
+}
+#footer #rigth h1{
+    margin-right: -73px;
+    font-size: 10pt;
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+#footer #footerResponsive #rigth form{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+#footer #footerResponsive #rigth form input {
+    width: 158px;
+    margin: auto;
+    margin-left: -34px;
+    background-color: #fff;
+}
+#footer #footerResponsive #rigth form button {
+    width: 137PX;
+    height: 45px;
+    margin: 0;
+    background-color: darkgray;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+#footer #footerResponsive #rigth h5{
+    color: #fff;
+    text-align: initial;
+    margin-left: 37px;
+    font-size: 20pt;
+    margin-bottom: 0;
+    margin-top: 70px;
+}
+#footer #footerResponsive #rigth a {
+    width: 70px;
+}
+#footer #footerResponsive #rigth #linkResponsive {
+    margin-left: -69px;
+    width: 335px;
+}
+
+#footer #left {
+    display: grid;
+    margin-top: 850px;
+    margin-left: -280px;
+    height: 289px;
+    width: 280px;
+    border: none;
+}
+#footer #left #menu {
+    border: solid 3px #fff;
+    width: 369px;
+    margin-left: -39px;
+    height: auto;
+    text-align: center;
+    margin-top: -209px;
+}
+#footer #left #menu h3 {
+    margin-right: 137px;
+    text-align: end;
+}
+#footer #left #menu a {
+    margin-left: 60px;
+    margin-top: -4px;
+    height: 60px;
+}
+#footer #left #menu #hideMenuFooter {
+    display:none;
+}
+#footer #left #menu {
+    height: 55px;
+    margin: -30px;
+    margin-top: -272px;
+}
+.newMenuFooter #footer #left #menu #hideMenuFooter {
+    display: grid;
+}
+.newMenuFooter #footer #left #menu {
+    height: auto;
+    margin-bottom: 352px;
+}
+
+#footer #left #sobreFooter {
+    margin-left: -19px;
+    width: 347px;
+    margin-right: 277px;
+    border: solid 3px #fff;
+    text-align: center;
+    margin-top: -308px;
+    margin-bottom: -81px; 
+}
+#footer #left #sobreFooter a {
+    margin-bottom: -15px;
+    color: #fff;
+    text-decoration: none;
+    /* padding: 0; */
+    height: 10px;
+    text-align: initial;
+    margin-left: 42px;
+    width: 142px;
+    margin-top: -20px;
+    font-size: 11pt;
+}
+#footer #left h3{
+    text-align: center;
+    color: #fff;
+    
+}
+#footer #left #sobreFooter h3{
+    margin-left: 30px;
+}
+#footer #left #sobreFooter #hideSobreFooter {
+    display:none;
+}
+#footer #left #sobreFooter {
+    width: 359px;
+    height: 55px;
+    margin: -30px;
+    margin-top: -357px;
+}
+.newSobreFooter #footer #left #sobreFooter #hideSobreFooter {
+    display: grid;
+}
+.newSobreFooter #footer #left #sobreFooter {
+    height: 212px;
+    margin-bottom: 34px;
+}
+
+} 
